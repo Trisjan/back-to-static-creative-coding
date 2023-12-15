@@ -1,15 +1,20 @@
+/* Importing the 'Bangers' font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+/* Resetting default margin, padding, and setting the font-family for the entire document */
 * {
     margin: 0;
     padding: 0;
     font-family: 'Bangers';
 }
 
-.popart,  .intro {
+/* Styling for the intro and popart sections */
+.popart, .intro {
     height: 100vh;
     scroll-snap-align: start;
 }
 
+/* Styling for the light overlay */
 .light {
     position: fixed;
     top: 0;
@@ -17,19 +22,24 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: radial-gradient(circle at var(--x) var(--y), transparent 0%, rgba(0,0,0,95) 20%);
+    /* Background with radial gradient for light effect */
+    background: radial-gradient(circle at var(--x) var(--y), transparent 0%, rgba(0, 0, 0, 0.95) 20%);
 }
 
+/* CSS class for turning off an element (not currently used) */
 .turnoff {
     display: none;
 }
 
+/* Styling for the scroller section */
 .scroller {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
 
+/* Styling for the intro section */
 .intro {
+    /* Background image for the intro section */
     background: url("assets_spike2/4826101.jpg") no-repeat center center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -43,6 +53,7 @@
     justify-content: space-evenly;
 }
 
+/* Styling for images within the intro section */
 .intro img {
     width: 35%;
     object-fit: contain;
@@ -51,16 +62,20 @@
     filter: grayscale(80%);
 }
 
+/* Styling for the popart section */
 .popart {
+    /* Background image for the popart section */
     background: url("assets_spike2/8003264.jpg") no-repeat center center;
     display: flex;
     align-items: center;
 }
 
+/* Styling for images within the popart section */
 .popart img {
     max-width: 25%;
 }
 
+/* Styling for the layout within the popart section */
 .popart .layout {
     display: flex;
     flex-direction: column;
@@ -69,6 +84,7 @@
     margin-left: 10%;
 }
 
+/* Styling for specific images within the layout */
 .popart .layout .above img:last-child {
     filter: hue-rotate(90deg);
 }
@@ -81,8 +97,7 @@
     filter: hue-rotate(270deg);
 }
 
-/* toggle button */
-
+/* Styling for the toggle button */
 .popart .button {
     display: flex;
     flex-direction: column;
